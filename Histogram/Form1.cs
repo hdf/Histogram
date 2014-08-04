@@ -86,7 +86,7 @@ namespace Histogram
 
     private static int[] GetHistogramData(byte[] bytes)
     {
-      int[] dist = new int[sizeof(byte)];
+      int[] dist = new int[256];
       for (int i = 0; i < bytes.Length; i++)
         dist[bytes[i]]++;
       return dist;
