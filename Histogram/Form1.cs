@@ -178,7 +178,7 @@ namespace Histogram
       Pen eraser = new Pen(Color.FromArgb(64, Form1.DefaultBackColor.R, Form1.DefaultBackColor.G, Form1.DefaultBackColor.B), 1.0f);
       for (int i = 0; i < dist.Length; i++)
       {
-        if (i == stats["maxid"] || i == stats["minid"])
+        if (dist[i] == dist[(int)stats["maxid"]] || dist[i] == dist[(int)stats["minid"]])
           c = HSL2RGB(i * (.9 / (double)dist.Length), .9, .5);
         else
           c = HSL2RGB(i * (.9 / (double)dist.Length), .6, .5);
